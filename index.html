@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARU 마루 | 한일 로테이션 소개팅</title>
+<meta name="description" content="말이 서툴러도 마음은 통하는 자리. 통역사 × 일본 현지 파트너 × 위밋 운영팀이 함께하는 한일 로테이션 소개팅 마루.">
+<meta property="og:title" content="MARU 마루 | 한일 로테이션 소개팅">
+<meta property="og:description" content="말이 서툴러도 마음은 통하는 자리">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 300 200%27%3E%3CclipPath id=%27c%27%3E%3Ccircle cx=%27110%27 cy=%27100%27 r=%2790%27/%3E%3C/clipPath%3E%3Ccircle cx=%27110%27 cy=%27100%27 r=%2790%27 fill=%27%23F4A9B8%27/%3E%3Ccircle cx=%27190%27 cy=%27100%27 r=%2790%27 fill=%27%23E07A8F%27/%3E%3Ccircle cx=%27190%27 cy=%27100%27 r=%2790%27 fill=%27%23C8243B%27 clip-path=%27url(%23c)%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --cream:#FBF4EC; --cream2:#F6EAE0; --pink:#F4A9B8; --rose:#E07A8F; --red:#C8243B;
+  --ink:#4A2A2E; --taupe:#8A666D; --line:#EBD9D2; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Pretendard","Noto Sans CJK KR","Apple SD Gothic Neo",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:90px}
+.wrap{max-width:480px;margin:0 auto;padding:0 24px}
+.nb{white-space:nowrap}
+.red{color:var(--red)}
+section{padding:72px 0;position:relative;overflow:hidden}
+section.alt{background:var(--cream2)}
+.eyebrow{font-size:12px;letter-spacing:4px;font-weight:700;color:var(--rose);margin-bottom:14px;text-align:center}
+h2{font-size:26px;line-height:1.4;font-weight:800;text-align:center;letter-spacing:-.5px}
+.lead{font-size:15px;color:var(--taupe);text-align:center;margin-top:16px}
+
+/* 상단 */
+.top-nav{position:sticky;top:0;z-index:20;background:rgba(251,244,236,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand-mini{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:4px;color:var(--red);font-size:15px}
+.top-nav a{font-size:13px;color:var(--taupe);text-decoration:none}
+
+/* 히어로 */
+.hero{padding:64px 0 76px;text-align:center}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;z-index:0}
+.hero::before{width:420px;height:420px;background:#F7DCE1;opacity:.6;top:-160px;right:-180px}
+.hero::after{width:320px;height:320px;background:#F4C7D0;opacity:.4;bottom:-140px;left:-150px}
+.hero .wrap{position:relative;z-index:1}
+.hero .logo{width:150px;height:100px;margin:0 auto}
+.hero .word{font-size:22px;font-weight:800;letter-spacing:10px;color:var(--red);margin-top:14px;padding-left:10px}
+.hero .sub-word{font-size:13px;letter-spacing:3px;color:#B5677A;margin-top:4px}
+.hero h1{font-size:34px;line-height:1.3;font-weight:900;letter-spacing:-1px;margin-top:40px}
+.hero p{font-size:16px;color:var(--taupe);margin-top:16px}
+.badge-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:28px}
+.badge{font-size:12.5px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--ink);font-weight:600}
+
+.btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:16px;background:var(--red);color:#fff;font-size:17px;font-weight:800;padding:18px;cursor:pointer;font-family:inherit;text-decoration:none}
+.btn-primary svg{width:16px;height:16px}
+.hero .btn-primary{margin-top:36px}
+.hero .note{font-size:12.5px;color:var(--taupe);margin-top:12px}
+
+/* 포인트 카드 */
+.points{display:flex;flex-direction:column;gap:14px;margin-top:36px}
+.point{background:var(--white);border-radius:20px;padding:22px 22px;box-shadow:0 6px 20px rgba(200,36,59,.06)}
+.point b{display:block;font-size:17px;font-weight:800;margin-bottom:6px}
+.point span{font-size:14px;color:var(--taupe)}
+.point .num{display:inline-block;font-size:12px;font-weight:800;color:var(--rose);letter-spacing:2px;margin-bottom:8px}
+
+/* 협업 구조 */
+.team{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:36px}
+.team-card{width:100%;background:var(--white);border-radius:20px;padding:20px 22px;display:flex;align-items:center;gap:16px;box-shadow:0 6px 20px rgba(200,36,59,.06)}
+.dot{width:46px;height:46px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:900;color:#fff}
+.team-card b{display:block;font-size:16.5px;font-weight:800}
+.team-card span{font-size:13.5px;color:var(--taupe)}
+.x{font-size:22px;color:var(--rose);font-weight:700;line-height:1}
+
+/* 진행 방식 */
+.steps{list-style:none;margin-top:36px;position:relative}
+.steps li{position:relative;padding:0 0 26px 52px}
+.steps li::before{content:attr(data-n);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:var(--white);border:2px solid var(--pink);color:var(--red);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.steps li::after{content:"";position:absolute;left:17px;top:34px;bottom:2px;width:2px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps b{display:block;font-size:16px;font-weight:800}
+.steps span{font-size:14px;color:var(--taupe)}
+
+/* FAQ */
+.faq{margin-top:32px;display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--white);border-radius:16px;padding:18px 20px}
+.faq summary{font-weight:700;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--rose);font-weight:800;font-size:18px;line-height:1.3}
+.faq details[open] summary::after{content:"–"}
+.faq p{font-size:14px;color:var(--taupe);margin-top:10px}
+
+/* 신청폼 */
+.final{background:linear-gradient(180deg,var(--cream2),#F7DCE1)}
+.apply-form{background:var(--white);border-radius:24px;padding:28px 22px;margin-top:32px;box-shadow:0 10px 30px rgba(200,36,59,.08)}
+.field{margin-bottom:22px}
+.field>label,.field .lbl{display:block;font-size:14.5px;font-weight:700;margin-bottom:8px}
+.field small{display:block;font-size:12px;color:var(--taupe);margin-top:6px}
+.field input[type=text],.field input[type=tel],.field input[type=number],.field select{width:100%;font-family:inherit;font-size:16px;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;background:#FFFCFA;color:var(--ink);-webkit-appearance:none;appearance:none}
+.field input:focus,.field select:focus{outline:none;border-color:var(--rose)}
+.radio-row{display:flex;gap:8px;flex-wrap:wrap}
+.radio-row>label{flex:1;min-width:0}
+.radio-row input{position:absolute;opacity:0;pointer-events:none}
+.radio-row span{display:block;text-align:center;padding:13px 6px;border:1.5px solid var(--line);border-radius:12px;font-size:14.5px;font-weight:600;cursor:pointer;background:#FFFCFA}
+.radio-row span.dashed{border-style:dashed;line-height:1.5}
+.radio-row input:checked+span{border-color:var(--red);background:#FDEEF0;color:var(--red)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--taupe);cursor:pointer}
+.check input{margin-top:3px;width:18px;height:18px;accent-color:var(--red);flex-shrink:0}
+.consent-box{background:var(--cream);border-radius:12px;padding:14px 16px;margin-bottom:12px;font-size:13px}
+.consent-box summary{display:flex;justify-content:space-between;cursor:pointer;list-style:none;font-weight:600}
+.consent-box summary::-webkit-details-marker{display:none}
+.consent-more{color:var(--rose);font-size:12.5px}
+.consent-body{margin-top:10px;color:var(--taupe);line-height:1.75;font-size:12.5px}
+.form-status{font-size:13.5px;text-align:center;margin-top:12px;display:none;color:var(--red)}
+.form-status.show{display:block}
+.apply-form button[type=submit]{margin-top:6px}
+
+/* 완료 카드 */
+.af-done{display:none;background:var(--white);border-radius:24px;padding:30px 22px;margin-top:32px;text-align:center;box-shadow:0 10px 30px rgba(200,36,59,.1)}
+.af-done-title{font-size:21px;font-weight:900;color:var(--red)}
+.af-done-lead{font-size:14.5px;color:var(--taupe);margin-top:10px}
+.af-done-lead strong{color:var(--ink)}
+.af-done-msgbox{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--cream);border-radius:12px;padding:14px 16px;margin-top:20px;font-weight:700;font-size:15px;text-align:left}
+.af-done-msgbox button{border:0;background:var(--ink);color:#fff;font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:8px;cursor:pointer;flex-shrink:0;font-family:inherit}
+.af-done-kakao{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;background:#FEE500;color:#3A1D1D;font-weight:800;font-size:16px;padding:17px;border-radius:14px;text-decoration:none}
+.af-done-steps{text-align:left;font-size:13.5px;color:var(--taupe);margin:18px 0 0 18px;line-height:1.9}
+.af-done-again{margin-top:20px;border:1.5px solid var(--line);background:none;color:var(--taupe);font-size:13.5px;padding:11px 16px;border-radius:12px;cursor:pointer;font-family:inherit}
+
+footer{padding:44px 0 30px;text-align:center;background:var(--ink);color:#E9D6D9}
+footer .kakao{font-size:13.5px;line-height:1.8}
+footer a{color:#fff;font-weight:700}
+footer .brand{margin-top:22px;letter-spacing:8px;font-weight:800;font-size:13px;color:var(--pink)}
+footer .copy{font-size:11.5px;color:#B79AA0;margin-top:8px}
+
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(251,244,236,0),var(--cream) 35%)}
+.sticky-cta .btn-primary{max-width:440px;margin:0 auto;box-shadow:0 8px 24px rgba(200,36,59,.28)}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="maru-clip"><circle cx="110" cy="100" r="90"/></clipPath>
+    <symbol id="maru-logo" viewBox="0 0 300 200">
+      <circle cx="110" cy="100" r="90" fill="#F4A9B8"/>
+      <circle cx="190" cy="100" r="90" fill="#E07A8F"/>
+      <circle cx="190" cy="100" r="90" fill="#C8243B" clip-path="url(#maru-clip)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav class="top-nav">
+  <div class="wrap">
+    <div class="brand-mini"><svg width="33" height="22"><use href="#maru-logo"/></svg>MARU</div>
+    <a href="https://www.instagram.com/marumeet_kr/" target="_blank" rel="noopener">@marumeet_kr</a>
+  </div>
+</nav>
+
+<!-- 1. 히어로 -->
+<section class="hero">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 300 200"><use href="#maru-logo"/></svg>
+    <div class="word">MARU</div>
+    <div class="sub-word">마루 · まる</div>
+    <h1>한일<br>로테이션 소개팅</h1>
+    <p>말이 서툴러도<br><b class="red">마음은 통하는 자리</b></p>
+    <div class="badge-row">
+      <span class="badge">🗣 통역 지원</span>
+      <span class="badge">🤝 일본 현지 파트너</span>
+      <span class="badge">💘 위밋 운영팀 진행</span>
+    </div>
+    <button type="button" class="btn-primary" onclick="scrollToApply()">
+      참가 조건 확인하기
+      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <p class="note">첫 마루 <b class="red">12월 19일(토)</b><br>신청은 부담 없이, <span class="nb">결제는 선정된 후에만 해요 :)</span></p>
+  </div>
+</section>
+
+<!-- 2. 어떤 자리인지 -->
+<section class="alt" id="about">
+  <div class="wrap">
+    <p class="eyebrow reveal">ABOUT MARU</p>
+    <h2 class="reveal">일본어를 몰라도<br>괜찮아요</h2>
+    <p class="lead reveal">마루는 일본어로 '동그라미'예요.<br>한국과 일본, 두 동그라미가 겹치는 자리를 만들어요.</p>
+    <div class="points">
+      <div class="point reveal"><span class="num">POINT 1</span><b>통역사가 현장에 함께해요</b><span>대화가 막히면 바로 이어드려요. 말이 서툴러도 걱정 마세요.</span></div>
+      <div class="point reveal"><span class="num">POINT 2</span><b>대화 카드로 어색함 없이</b><span>처음 만나도 자연스럽게 이야기를 시작할 수 있게 준비해뒀어요.</span></div>
+      <div class="point reveal"><span class="num">POINT 3</span><b>모두와 1:1로 대화해요</b><span>로테이션 방식이라 한 자리에서 여러 분과 차례로 이야기 나눠요.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 협업 구조 -->
+<section id="team">
+  <div class="wrap">
+    <p class="eyebrow reveal">WHO WE ARE</p>
+    <h2 class="reveal">세 팀이 함께<br>만들었어요</h2>
+    <div class="team">
+      <div class="team-card reveal"><div class="dot" style="background:var(--pink)">通</div><div><b>한·일 통역사</b><span>현장에서 대화를 이어드려요</span></div></div>
+      <div class="x">×</div>
+      <div class="team-card reveal"><div class="dot" style="background:var(--rose)">日</div><div><b>일본 현지 파트너</b><span>일본 참가자를 모집해요</span></div></div>
+      <div class="x">×</div>
+      <div class="team-card reveal"><div class="dot" style="background:var(--red)">韓</div><div><b>위밋 운영팀</b><span>대구 로테이션 소개팅 200회+ 진행</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 진행 방식 -->
+<section class="alt" id="howto">
+  <div class="wrap">
+    <p class="eyebrow reveal">HOW IT WORKS</p>
+    <h2 class="reveal">이렇게 진행돼요</h2>
+    <ol class="steps">
+      <li data-n="1" class="reveal"><b>1차 신청 (30초)</b><span>아래 폼에 기본 정보만 남겨주세요.</span></li>
+      <li data-n="2" class="reveal"><b>카카오톡 채널로 알리기</b><span>신청 완료 문구를 마루 채널로 보내주세요.</span></li>
+      <li data-n="3" class="reveal"><b>2차 신청서 작성</b><span>채널로 2차 신청서를 보내드려요. 사진과 자세한 정보를 받아요.</span></li>
+      <li data-n="4" class="reveal"><b>선정 후 개별 연락</b><span>꼼꼼히 확인한 뒤 잘 맞는 분들께 일정과 참가비를 안내드려요.</span></li>
+      <li data-n="5" class="reveal"><b>마루에서 만나요 💕</b><span>통역사와 함께 편하게 대화 나눠요.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow reveal">FAQ</p>
+    <h2 class="reveal">자주 묻는 질문</h2>
+    <div class="faq">
+      <details class="reveal"><summary>일본어를 전혀 못해도 되나요?</summary><p>네, 괜찮아요. 통역사가 현장에 함께하고, 대화 카드도 준비돼 있어요.</p></details>
+      <details class="reveal"><summary>일정은 언제인가요?</summary><p>첫 마루는 12월 19일(토)이에요. 이번 날짜가 어려우시면 신청서에서 '다음 일정 생기면 연락주세요'를 골라주세요. 다음 일정이 잡히면 먼저 연락드려요.</p></details>
+      <details class="reveal"><summary>일본 현지에서도 열리나요?</summary><p>일본 여행 가시는 분들을 위한 현지 개최도 준비하고 있어요. 일정이 잡히면 채널로 먼저 안내드려요.</p></details>
+      <details class="reveal"><summary>장소와 시간은요?</summary><p>선정되신 분께 장소와 시간을 개별로 안내드려요.</p></details>
+      <details class="reveal"><summary>참가비는 얼마인가요?</summary><p>선정되신 분께 일정과 함께 안내드려요. 결제는 선정된 후에만 진행돼요.</p></details>
+      <details class="reveal"><summary>신청하면 무조건 참가하나요?</summary><p>아니요. 신청서를 꼼꼼히 확인한 뒤 잘 맞는 분들로 선정해 개별 연락드려요.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 신청폼 -->
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow reveal">APPLY</p>
+    <h2 class="reveal" id="apply-top">첫 마루,<br><span class="red">12월 19일(토)</span>에 열려요</h2>
+    <p class="lead reveal">신청서를 꼼꼼히 확인한 뒤<br><span class="nb">잘 맞는 분들께 개별 연락드려요 :)</span></p>
+
+    <form class="apply-form reveal" id="apply-form">
+      <div class="field">
+        <label for="af-name">이름</label>
+        <input type="text" id="af-name" name="이름" placeholder="예: 홍길동" required>
+      </div>
+      <div class="field">
+        <span class="lbl">성별</span>
+        <div class="radio-row">
+          <label><input type="radio" name="성별" value="남" required><span>남</span></label>
+          <label><input type="radio" name="성별" value="여"><span>여</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <span class="lbl">참가 가능한 일정을 선택해주세요 :)</span>
+        <div class="radio-row" style="flex-direction:column">
+          <label><input type="radio" name="참가 일정" value="12/19(토)" required><span>12월 19일(토)</span></label>
+          <label><input type="radio" name="참가 일정" value="이번은 어렵고 다음 일정 생기면 연락"><span class="dashed">이번은 어렵고,<br>다음 일정 생기면 연락주세요 :)</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="af-birth">출생연도</label>
+        <input type="number" id="af-birth" name="출생연도" placeholder="예: 1990" min="1960" max="2008" inputmode="numeric" required>
+      </div>
+      <div class="field">
+        <label for="af-height">키 (cm)</label>
+        <input type="number" id="af-height" name="키" placeholder="예: 175" min="140" max="210" inputmode="numeric" required>
+      </div>
+      <div class="field">
+        <label for="af-phone">연락처</label>
+        <input type="tel" id="af-phone" name="연락처" placeholder="예: 01012345678" inputmode="numeric" required>
+        <small>하이픈(-) 없이 숫자만 정확히 기재해주세요!</small>
+      </div>
+      <div class="field">
+        <details class="consent-box">
+          <summary><span>개인정보 수집·이용 동의 <b>(필수)</b></span><span class="consent-more">보기</span></summary>
+          <div class="consent-body">
+            동의를 거부하실 수 있으나, 거부 시 신청이 어려워요.<br>
+            · 지금 받는 항목: 이름, 성별, 출생연도, 키, 연락처, 참가 가능 일정<br>
+            · 선정 과정에서 추가로 받는 항목: 사진, 거주지, 직장, 신분증(주민번호 뒷자리 가림), 재직증명서 또는 사업자등록증<br>
+            · 이용 목적: 신청 처리, 매칭 및 결과 안내<br>
+            · 보유 기간: 신청일 기준 1년 후 자동 파기
+          </div>
+        </details>
+        <label class="check"><input type="checkbox" name="개인정보 동의" value="동의" required><span>위 개인정보 수집·이용에 동의하며, 추후 본인사진 / 신분증 / 직업 확인 추가자료 / 이상형 관련 추가 질문에도 동의합니다</span></label>
+      </div>
+      <input type="hidden" name="접수일시" id="af-time">
+      <button type="submit" class="btn-primary">1차 신청 제출하기</button>
+      <p class="form-status" id="af-status"></p>
+    </form>
+
+    <div id="af-done" class="af-done" role="status" aria-live="polite">
+      <h3 class="af-done-title">다음 단계가 남았어요!</h3>
+      <p class="af-done-lead">마루 카카오톡 채널에 아래 문구를 보내주시면<br><strong>2차 신청서를 보내드려요.</strong></p>
+      <div class="af-done-msgbox">
+        <span id="af-done-msg"></span>
+        <button type="button" id="af-done-copy">복사</button>
+      </div>
+      <a href="http://pf.kakao.com/_falvX/friend" target="_blank" rel="noopener" id="af-done-kakao" class="af-done-kakao">💬 마루 카카오톡 채널 열기</a>
+      <ol class="af-done-steps">
+        <li>위 노란 버튼을 눌러 채널을 열어요</li>
+        <li>채팅창에 <b>붙여넣기</b> (입력창 길게 누르기)</li>
+        <li>전송하면 2차 신청서가 도착해요!</li>
+      </ol>
+      <button type="button" id="af-done-again" class="af-done-again">친구도 함께 신청하기</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="kakao">궁금한 건 편하게 카카오톡 채널로 물어보세요<br><a href="http://pf.kakao.com/_falvX/friend" target="_blank" rel="noopener">마루 채널 바로가기</a></p>
+    <p class="brand">MARU</p>
+    <p class="copy">© MARU · 한일 로테이션 소개팅</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <button type="button" class="btn-primary" onclick="scrollToApply()">
+    30초만에 신청하기
+    <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<script>
+  // 신청 버튼 → 신청폼 제목이 상단 메뉴 바로 아래 오게 스크롤
+  function scrollToApply(){
+    var t = document.getElementById('apply-top');
+    var nav = document.querySelector('.top-nav');
+    var offset = (nav ? nav.getBoundingClientRect().height : 0) + 24;
+    window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - offset, behavior:'smooth'});
+  }
+
+  // 스크롤 등장 효과
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){ e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.12});
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  // 신청폼 화면에선 하단 고정 버튼 숨기기
+  (function(){
+    var sticky = document.querySelector('.sticky-cta');
+    var target = document.querySelector('.final');
+    if(!('IntersectionObserver' in window) || !sticky || !target) return;
+    new IntersectionObserver(function(en){
+      sticky.style.display = en[0].isIntersecting ? 'none' : '';
+    }, {threshold:.05}).observe(target);
+  })();
+
+  // ===== 1차 신청폼 → 구글시트 '마루 소개팅' 전송 =====
+  // 앱스 스크립트 배포 후 나오는 웹앱 URL을 아래에 넣으세요.
+  var SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycby5hbLo_l_9WZZM9k2glpNtAWyCXCEAzkPZmiUYULKzlB3INWEen_2DMH5VmcXTNl77/exec";
+
+  (function(){
+    var form = document.getElementById('apply-form');
+    var status = document.getElementById('af-status');
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var doneBox = document.getElementById('af-done');
+
+    function copyText(text){
+      try{ if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).catch(function(){}); return; } }catch(e){}
+      try{
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+      }catch(e){}
+    }
+    function showDone(name){
+      var msg = name + ' 마루 1차 신청 완료';
+      document.getElementById('af-done-msg').textContent = msg;
+      doneBox.dataset.msg = msg;
+      status.classList.remove('show');
+      form.style.display = 'none';
+      doneBox.style.display = 'block';
+      setTimeout(function(){ doneBox.scrollIntoView({behavior:'smooth', block:'center'}); }, 50);
+    }
+    document.getElementById('af-done-copy').addEventListener('click', function(){
+      copyText(doneBox.dataset.msg || '');
+      var btn = this; btn.textContent = '복사됨 ✓';
+      setTimeout(function(){ btn.textContent = '복사'; }, 1800);
+    });
+    document.getElementById('af-done-kakao').addEventListener('click', function(){ copyText(doneBox.dataset.msg || ''); });
+    document.getElementById('af-done-again').addEventListener('click', function(){
+      doneBox.style.display = 'none'; form.style.display = ''; form.scrollIntoView({behavior:'smooth'});
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(SHEET_WEB_APP_URL.indexOf('YOUR_APPS_SCRIPT') === 0){
+        status.textContent = '⚠️ 아직 구글시트 연결이 설정되지 않았어요';
+        status.classList.add('show');
+        return;
+      }
+      var phone = document.getElementById('af-phone');
+      phone.value = phone.value.replace(/\D/g,'');
+      if(!/^01\d{8,9}$/.test(phone.value)){
+        status.textContent = '연락처를 숫자만 정확히 적어주세요 (예: 01012345678)';
+        status.classList.add('show');
+        phone.focus();
+        return;
+      }
+      document.getElementById('af-time').value = new Date().toLocaleString('ko-KR', {timeZone:'Asia/Seoul'});
+      var name = document.getElementById('af-name').value.trim();
+      var data = new FormData(form);
+
+      submitBtn.disabled = true; submitBtn.textContent = '제출 중...';
+      status.classList.remove('show');
+
+      // 앱스 스크립트 응답이 느려서 완료 화면은 1.2초 안에 먼저 띄움 (keepalive라 전송은 끝까지 진행)
+      var finished = false;
+      function done(){
+        if(finished) return; finished = true;
+        showDone(name);
+        form.reset();
+        submitBtn.disabled = false; submitBtn.textContent = '1차 신청 제출하기';
+      }
+      var fastTimer = setTimeout(done, 1200);
+      fetch(SHEET_WEB_APP_URL, { method:'POST', mode:'no-cors', keepalive:true, body:data })
+        .then(function(){ clearTimeout(fastTimer); done(); })
+        .catch(function(){
+          clearTimeout(fastTimer);
+          if(finished) return;
+          finished = true;
+          status.textContent = '⚠️ 제출 중 오류가 났어요. 잠시 후 다시 시도해주세요.';
+          status.classList.add('show');
+          submitBtn.disabled = false; submitBtn.textContent = '1차 신청 제출하기';
+        });
+    });
+  })();
+</script>
+</body>
+</html>
