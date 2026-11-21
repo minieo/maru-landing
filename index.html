@@ -32,6 +32,12 @@ h2{font-size:26px;line-height:1.4;font-weight:800;text-align:center;letter-spaci
 .brand-mini{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:4px;color:var(--red);font-size:15px}
 .top-nav a{font-size:13px;color:var(--taupe);text-decoration:none}
 
+.top-nav a.nav-ask{font-size:13px;font-weight:700;color:var(--red);background:#fff;border:1.5px solid var(--pink);border-radius:999px;padding:6px 13px}
+.ask-box{margin-top:28px;background:#fff;border-radius:20px;padding:24px 20px;text-align:center}
+.ask-box p{font-size:15.5px;font-weight:700}
+.ask-box p span{font-size:13.5px;font-weight:400;color:var(--taupe)}
+.ask-btn{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:16px;background:#FEE500;color:#3A1D1D;font-weight:800;font-size:15.5px;padding:15px;border-radius:14px;text-decoration:none}
+
 /* 히어로 */
 .hero{padding:64px 0 76px;text-align:center}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;z-index:0}
@@ -149,7 +155,7 @@ footer .copy{font-size:11.5px;color:#B79AA0;margin-top:8px}
 <nav class="top-nav">
   <div class="wrap">
     <div class="brand-mini"><svg width="33" height="22"><use href="#maru-logo"/></svg>MARU</div>
-    <a href="https://www.instagram.com/marumeet_kr/" target="_blank" rel="noopener">@marumeet_kr</a>
+    <a class="nav-ask" href="http://pf.kakao.com/_falvX/friend" target="_blank" rel="noopener">💬 문의하기</a>
   </div>
 </nav>
 
@@ -230,6 +236,10 @@ footer .copy{font-size:11.5px;color:#B79AA0;margin-top:8px}
       <details class="reveal"><summary>장소와 시간은요?</summary><p>오사카 시내에서 진행해요. 정확한 장소와 시간은 선정되신 분께 개별로 안내드려요.</p></details>
       <details class="reveal"><summary>참가비는 얼마인가요?</summary><p>선정되신 분께 일정과 함께 안내드려요. 결제는 선정된 후에만 진행돼요.</p></details>
       <details class="reveal"><summary>신청하면 무조건 참가하나요?</summary><p>아니요. 신청서를 꼼꼼히 확인한 뒤 잘 맞는 분들로 선정해 개별 연락드려요.</p></details>
+    </div>
+    <div class="ask-box reveal">
+      <p>더 궁금한 게 있으신가요?<br><span>카카오톡으로 편하게 물어보세요 :)</span></p>
+      <a href="http://pf.kakao.com/_falvX/friend" target="_blank" rel="noopener" class="ask-btn">💬 카카오톡으로 문의하기</a>
     </div>
   </div>
 </section>
